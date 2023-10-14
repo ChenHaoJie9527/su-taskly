@@ -1,20 +1,22 @@
-import { useAtom, useStore } from "jotai";
-import { countAtom, increment, decrement, userInfo } from "./store";
+import SuContext from "./layout/Context";
+import SuHeader from "./layout/Header";
+import SuSider from "./layout/Sider";
+
+import styles from "./App.module.scss";
 
 function App() {
-  const [count, setCount] = useAtom(countAtom);
-  const store = useStore();
-  const { name, age } = store.get(userInfo);
   return (
-    <>
-      <h1 className="text-[red]">SU-Taskly</h1>
-      <h2>count: {count}</h2>
-      <div>
-        {name} {age}
+    <div className={`${styles.suLayout} container mx-auto`}>
+      <div className="w-full h-full flex">
+        <div className="max-w-[477px] w-full bg-[#F6F7FB]">
+          <SuSider />
+        </div>
+        <div className="w-full max-width-[962px]">
+          <SuHeader />
+          <SuContext />
+        </div>
       </div>
-      <button onClick={() => setCount(increment)}>Increment</button>
-      <button onClick={() => setCount(decrement)}>Decrement</button>
-    </>
+    </div>
   );
 }
 
