@@ -1,7 +1,12 @@
 import React from "react";
+import Logo from "../components/Logo";
 
 const Sider: React.FC = () => {
-  return <div>sider</div>;
+  return (
+    <div className="p-[60px]">
+      <Logo />
+    </div>
+  );
 };
 
 export default Sider;

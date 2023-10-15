@@ -6,7 +6,7 @@ import styles from "./App.module.scss";
 
 function App() {
   return (
-    <div className={`${styles.suLayout} container mx-auto`}>
+    <div className={`${styles.suLayout} container`}>
       <div className="w-full h-full flex">
         <div className="max-w-[477px] w-full bg-[#F6F7FB]">
           <SuSider />
