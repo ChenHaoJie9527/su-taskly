@@ -5,7 +5,7 @@ import WeeklyPinned from "../components/WeeklyPinned";
 const Sider: React.FC = () => {
   return (
     <ul className="px-[60px] pt-[40px] w-full h-full">
-      <li className="mb-[36px]">
+      <li className="mb-[26px]">
         <Logo />
       </li>
       <li>
